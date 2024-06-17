@@ -1,0 +1,89 @@
+<body>
+  <div class="header">Docutain SDK Example</div>
+  <div
+    class="panel"
+    (click)="this.scanDocument()"
+  >
+    <div class="panel-image">
+      <img [src]="this.getImage(SampleMenue.Dokumentenscanner)" />
+    </div>
+    <div>
+      <div class="panel-title">Document Scanner</div>
+      <div class="panel-text">
+        Starts the document scanner which provides automatic scanning of paper
+        documents.
+      </div>
+    </div>
+  </div>
+  <div class="panel" (click)="this.openPopupImport(SampleMenue.DataExtraction)">
+    <div class="panel-image">
+      <img [src]="this.getImage(SampleMenue.DataExtraction)" />
+    </div>
+    <div>
+      <div class="panel-title">Data Extraction</div>
+      <div class="panel-text">
+        Extract data, e.g. invoice data from a previously scanned or imported
+        (PDF or Image) document.
+      </div>
+    </div>
+  </div>
+  <div class="panel" (click)="this.openPopupImport(SampleMenue.ReadOCR)">
+    <div class="panel-image">
+      <img [src]="this.getImage(SampleMenue.ReadOCR)" />
+    </div>
+    <div>
+      <div class="panel-title">Text Recognition (OCR)</div>
+      <div class="panel-text">
+        Run OCR on the previously scanned or imported (PDF or Image) document an
+        get the recognized text.
+      </div>
+    </div>
+  </div>
+  <div class="panel" (click)="this.openPopupImport(SampleMenue.WritePDF)">
+    <div class="panel-image">
+      <img [src]="this.getImage(SampleMenue.WritePDF)" />
+    </div>
+    <div>
+      <div class="panel-title">Generate PDF Document</div>
+      <div class="panel-text">
+        Generate a searchable (includes recognized text) PDF document out of the
+        scanned pages or imported image.
+      </div>
+    </div>
+  </div>
+  <div class="panel" (click)="this.openSettings()">
+    <div class="panel-image">
+      <img [src]="this.getImage(SampleMenue.Settings)" />
+    </div>
+    <div>
+      <div class="panel-title">Settings</div>
+      <div class="panel-text">
+        Configure color, scanner and editing of the SDK
+      </div>
+    </div>
+  </div>
+
+  <div id="popup-import" class="popup">
+    <p>First, scan or import a document</p>
+    <ul>
+      <li>
+        <button
+          href=""
+          (click)="this.onSourceSelected(DocumentSource.Dokumentenscanner)"
+        >
+          Document scan
+        </button>
+      </li>
+      <li>
+        <button (click)="this.onSourceSelected(DocumentSource.PDFImport)">
+          PDF import
+        </button>
+      </li>
+      <li>
+        <button (click)="this.onSourceSelected(DocumentSource.ImageImport)">
+          Image import
+        </button>
+      </li>
+    </ul>
+  </div>
+</body>

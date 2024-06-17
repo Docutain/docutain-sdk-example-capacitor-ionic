@@ -1,0 +1,115 @@
+<body>
+  <div class="result-header">
+    <a href="" routerLink="/home" class="triangle">&nbsp;</a>
+    <div class="result-title">Docutain SDK - Text Settings</div>
+  </div>
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        <ion-label color="success">
+          <h2>Scan settings</h2>
+        </ion-label>
+      </ion-item-divider>
+      <ion-item *ngFor="let entry of ScanSettingsData">
+        <ion-toggle
+          [(ngModel)]="entry.isToggled"
+          (ionChange)="onScanSettings(entry.key)"
+        >
+          <ion-label>
+            <h2>{{entry.text}}</h2>
+            <p class="nowrap">{{entry.description}}</p>
+          </ion-label>
+        </ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-select
+          label="Default scan filter"
+          [(ngModel)]="selectedFilter"
+          (ngModelChange)="onSelectedFilter()"
+        >
+          <ion-select-option [value]="0">Auto</ion-select-option>
+          <ion-select-option [value]="1">Gray</ion-select-option>
+          <ion-select-option [value]="2">Black & White</ion-select-option>
+          <ion-select-option [value]="3">Original</ion-select-option>
+          <ion-select-option [value]="4">Text</ion-select-option>
+          <ion-select-option [value]="5">Auto 2</ion-select-option>
+          <ion-select-option [value]="6">Illustration</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        <ion-label color="success">
+          <h2>Edit settings</h2>
+        </ion-label>
+      </ion-item-divider>
+      <ion-item *ngFor="let entry of EditSettingsData">
+        <ion-toggle
+          [(ngModel)]="entry.isToggled"
+          (ionChange)="onEditSettings(entry.key)"
+        >
+          <ion-label>
+            <h2>{{entry.text}}</h2>
+            <p class="nowrap">{{entry.description}}</p>
+          </ion-label>
+        </ion-toggle>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        <ion-label color="success">
+          <h2>Color settings</h2>
+        </ion-label>
+      </ion-item-divider>
+      <ion-item *ngFor="let entry of ColorSettingsData">
+        <ion-label>
+          <h2>{{entry.text}}</h2>
+          <p class="nowrap">{{entry.description}}</p>
+        </ion-label>
+        <div class="colorFrame">
+          <div
+            class="colorDot"
+            [style.background]="entry.colorLight"
+            [(colorPicker)]="entry.colorLight"
+            [cpSaveClickOutside]="true"
+            (colorPickerChange)="onColorLight($event, entry.key)"
+          ></div>
+          <div class="colorDotText">Light</div>
+        </div>
+        <div class="colorFrame">
+          <div
+            class="colorDot"
+            [style.background]="entry.colorDark"
+            [(colorPicker)]="entry.colorDark"
+            [cpSaveClickOutside]="true"
+            (colorPickerChange)="onColorDark($event, entry.key)"
+          ></div>
+          <div class="colorDotText">Dark</div>
+        </div>
+      </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">
+        <ion-label color="success">
+          <h2>Reset</h2>
+        </ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>
+          <h2>Reset all settings to the default values</h2>
+        </ion-label>
+        <ion-button (click)="onReset()" color="success">Reset</ion-button><br />
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <h2>Unittests</h2>
+        </ion-label>
+        <ion-button (click)="onUnitTest()" color="success">UnitTest</ion-button>
+        <br />
+        <ion-button (click)="onUnitTest2()" color="success"
+          >UnitTest4</ion-button
+        >
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+</body>

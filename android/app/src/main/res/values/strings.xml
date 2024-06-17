@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">docutain-sdk-example-ionic-capacitor</string>
+    <string name="title_activity_main">docutain-sdk-example-ionic-capacitor</string>
+    <string name="package_name">de.docutain.sdk_example_capacitor_ionic</string>
+    <string name="custom_url_scheme">de.docutain.sdk_example_capacitor_ionic</string>
+</resources>

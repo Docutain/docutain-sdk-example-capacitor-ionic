@@ -1,0 +1,7 @@
+{
+  "name": "docutain-sdk-example-capacitor-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

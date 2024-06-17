@@ -1,0 +1,137 @@
+body {
+  overflow: auto;
+  text-align: left;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #43a047;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px;
+  //box-shadow: 0px 1px 10px #000;
+}
+
+.panel {
+  border-bottom: solid 1px #000;
+  padding: 10px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 50px auto;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  .panel:hover {
+    color: #0000;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .panel:hover {
+    color: red;
+  }
+}
+*/
+
+.panel:hover {
+  background-color: #ffffff;
+}
+
+.panel-image {
+  padding: 5px;
+  width: 48px;
+  height: 48px;
+}
+
+.panel-title {
+  font-size: larger;
+  padding: 5px;
+}
+
+.panel-text {
+  font-size: medium;
+  padding: 5px;
+}
+
+/* The actual popup */
+.popup {
+  visibility: hidden;
+  background-color: #e9e9e9;
+  color: #1d1d1d;
+  border-radius: 6px;
+  border: solid 1px #3f3f3f;
+  text-align: left;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.popup p {
+  margin-left: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.popup ul {
+  list-style: none;
+  font-size: medium;
+}
+
+.popup li {
+  margin-bottom: 10px;
+  margin-left: -20px;
+}
+
+.popup a {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+
+.popup button {
+  background-color: #43a047;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.popup button:hover {
+  background-color: #5fb464;
+}
+
+/* Toggle this class - hide and show the popup */
+.show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
