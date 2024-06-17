@@ -21,7 +21,6 @@ Install the project dependencies:
 
 ```
 npm install
-
 ```
 
 Run on Android

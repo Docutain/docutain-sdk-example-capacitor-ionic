@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
 import { ColorPickerService, ColorPickerModule } from 'ngx-color-picker';
-import { UnitTest } from '../../app.unittest';
 import {
   ScanSettings,
   EditSettings,
@@ -30,7 +29,6 @@ export class SettingsPage implements OnInit {
   EditSettings = EditSettings;
   ColorSettings = ColorSettings;
   TextRessources = TextRessources;
-  UnitTest = new UnitTest();
 
   ScanSettingsData: Array<ScanSettingsData> = [];
   EditSettingsData: Array<EditSettingsData> = [];
@@ -207,14 +205,6 @@ export class SettingsPage implements OnInit {
         entryColor.colorDark
       );
     }
-  }
-
-  async onUnitTest() {
-    await this.UnitTest.getTraceFile();
-  }  
-  
-  async onUnitTest2() {
-    await this.UnitTest.CheckTraceFunc();
   }
 
   public presetValues: string[] = [];

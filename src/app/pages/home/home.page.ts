@@ -131,7 +131,7 @@ export class HomePage {
         ScanSettings.PreCaptureFocus,
         true
       ),
-      //onboardingImageSource: "AppIcon",
+      //onboardingImageSource: "appicon",
 //      source: Source.Image,
 //      sourceImages:[(await Filesystem.getUri({ path: "image.jpg", directory:Directory.Data })).uri],
       defaultScanFilter: await this.getScanFilterConfig(),
