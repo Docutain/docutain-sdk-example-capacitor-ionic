@@ -13,7 +13,7 @@ The [Docutain SDK](https://SDK.docutain.com) is based on the world famous, succe
 Clone the repo:
 
 ```
-git clone https://github.com/Docutain/docutain-sdk-example-capacitor
+git clone https://github.com/Docutain/docutain-sdk-example-capacitor-ionic
 cd docutain-sdk-example-capacitor
 ```
 
