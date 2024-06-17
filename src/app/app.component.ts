@@ -29,7 +29,7 @@ export class AppComponent {
         role: 'confirm',
         handler: () => {
           window.open(
-            'https://sdk.docutain.com/TrialLicense?Source=11797002',
+            'https://sdk.docutain.com/TrialLicense?Source=4588041',
             '_self'
           );
           App.exitApp();
