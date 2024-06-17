@@ -14,7 +14,7 @@ Clone the repo:
 
 ```
 git clone https://github.com/Docutain/docutain-sdk-example-capacitor-ionic
-cd docutain-sdk-example-capacitor
+cd docutain-sdk-example-capacitor-ionic
 ```
 
 Install the project dependencies:
